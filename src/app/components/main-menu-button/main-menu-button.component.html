@@ -1,0 +1,17 @@
+<div class="pantalla">
+  <div class="circle-container" [class.fade-out]="desvaneciendo">
+    <div
+      *ngFor="let pixel of pixels"
+      class="pixel"
+      [style.left.px]="pixel.left"
+      [style.top.px]="pixel.top"
+    >
+    </div>
+    <div class="contenedor-boton">
+      <span class="ripple" #ripple></span>
+      <button class="boton-retro" (click)="iniciarEfecto()">
+        Presione para empezar
+      </button>
+    </div>
+  </div>
+</div>

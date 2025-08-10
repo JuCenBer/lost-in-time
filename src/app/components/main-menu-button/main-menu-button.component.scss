@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+  .circle-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: black;
+  transition: opacity 1s ease; /* transición suave */
+}
+
+.pixel {
+  width: 4px;
+  height: 4px;
+  background: white;
+  position: absolute;
+}
+
+.contenedor-boton {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.boton-retro {
+  width: 110px;
+  height: 110px;
+  background-color: black;
+  color: white;
+  font-size: 9px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.4;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+
+  position: relative; /* Cambiamos a absoluto */
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Lo centra exactamente */
+  z-index: 1;
+}
+
+.ripple {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.514);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1; /* debajo del botón */
+}
+
+.ripple.active {
+  animation: ripple-anim 0.9s ease-out forwards;
+}
+
+@keyframes ripple-anim {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.9;
+  }
+  100% {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+  }
+}
+
+.pantalla {
+  position: absolute;
+  width: 99%;
+  height: 98%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circle-container.fade-out {
+  opacity: 0;
+}
