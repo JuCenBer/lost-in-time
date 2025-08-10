@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface Pixel {
   left: number;
@@ -14,6 +15,8 @@ interface Pixel {
   styleUrl: './main-menu-button.component.scss'
 })
 export class MainMenuButtonComponent {
+
+  constructor(private router: Router) {}
 
   desvaneciendo = false;
 
@@ -58,8 +61,7 @@ pixels: Pixel[] = [];
   iniciarDesvanecimiento() {
     this.desvaneciendo = true;
     setTimeout(() => {
-      // Aquí podés redirigir o cambiar de vista
-      console.log('Pantalla oculta, ahora cargamos el juego');
-    }, 1000); // mismo tiempo que la transición
+      this.router.navigate(['/mainMenu']);
+    }, 1000);
   }
 }
