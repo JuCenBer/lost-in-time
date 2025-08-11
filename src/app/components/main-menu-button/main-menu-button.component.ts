@@ -18,10 +18,11 @@ export class MainMenuButtonComponent {
 
   constructor(private router: Router) {}
 
+  @ViewChild('ripple') ripple!: ElementRef<HTMLSpanElement>;
   desvaneciendo = false;
 
 
-pixels: Pixel[] = [];
+  pixels: Pixel[] = [];
   numPixels = 100;
   radio = 60;
   pixelSize = 4;
@@ -43,8 +44,6 @@ pixels: Pixel[] = [];
     }
   }
 
-  @ViewChild('ripple') ripple!: ElementRef<HTMLSpanElement>;
-
   iniciarEfecto(){
     this.dispararRipple();
     this.iniciarDesvanecimiento();
@@ -55,7 +54,6 @@ pixels: Pixel[] = [];
     rippleEl.classList.remove('active'); // reinicia animación
     void rippleEl.offsetWidth; // fuerza reflow
     rippleEl.classList.add('active');
-    this.iniciarDesvanecimiento();
   }
 
   iniciarDesvanecimiento() {
