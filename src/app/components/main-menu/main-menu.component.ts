@@ -1,11 +1,13 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-main-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './main-menu.component.html',
   styleUrl: './main-menu.component.scss',
   animations: [
@@ -23,6 +25,8 @@ import { Component } from '@angular/core';
 export class MainMenuComponent {
   items = [1, 2, 3, 4];
 
+  input: String[] = ['','','',''];
+
   modalAbierto: number | null = null;
 
   abrirModal(index: number) {
@@ -32,4 +36,6 @@ export class MainMenuComponent {
   cerrarModal() {
     this.modalAbierto = null;
   }
+
+  
 }

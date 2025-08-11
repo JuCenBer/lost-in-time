@@ -1,7 +1,7 @@
 <div class="pantalla">
   <div class="menu-container">
     <div class="menu-item" *ngFor="let item of items; let i = index">
-      <input type="text" class="menu-square">
+      <input type="text" class="menu-square" maxlength="1" [(ngModel)]="input[i]" (ngModelChange)="input[i] = input[i].toUpperCase()">
       <button class="icon-square" (click)="abrirModal(i)">
         🔍
       </button>
