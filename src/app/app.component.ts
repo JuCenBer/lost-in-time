@@ -1,17 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MusicComponentComponent } from './components/music-component/music-component.component';
+import { MusicComponent } from './components/music-component/music-component.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MusicComponentComponent],
+  imports: [RouterOutlet, MusicComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-  @ViewChild(MusicComponentComponent) musicComponent!: MusicComponentComponent;
+  @ViewChild(MusicComponent) musicComponent!: MusicComponent;
 
   title = 'lost-in-time';
 }

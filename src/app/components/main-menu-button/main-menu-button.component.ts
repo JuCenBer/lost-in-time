@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { MusicComponent } from '../music-component/music-component.component';
+import { ComunicationService } from '../../services/comunication.service';
 
 interface Pixel {
   left: number;
@@ -16,7 +18,9 @@ interface Pixel {
 })
 export class MainMenuButtonComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private comunicacionService: ComunicationService) {}
+
+  @ViewChild(MusicComponent) musicComponent!: MusicComponent;
 
   @ViewChild('ripple') ripple!: ElementRef<HTMLSpanElement>;
   desvaneciendo = false;
@@ -45,8 +49,11 @@ export class MainMenuButtonComponent {
   }
 
   iniciarEfecto(){
+    this.comunicacionService.ejecutarIniciarMusica();
     this.dispararRipple();
-    this.iniciarDesvanecimiento();
+    setTimeout(() => {
+      this.iniciarDesvanecimiento();
+    }, 2000);
   }
 
   dispararRipple() {
@@ -60,6 +67,6 @@ export class MainMenuButtonComponent {
     this.desvaneciendo = true;
     setTimeout(() => {
       this.router.navigate(['/mainMenu']);
-    }, 1000);
+    }, 5000);
   }
 }

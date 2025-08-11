@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .pantalla {
   position: absolute;
   width: 99%;
@@ -7,4 +9,89 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.menu-container {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-square {
+  width: 120px;
+  height: 120px;
+  border: 2px solid white;
+  background: rgb(26, 26, 26);
+  color: rgba(255, 255, 255, 0.848);
+  text-align: center;
+  font-size: 400%;
+  font-family: 'Press Start 2P', monospace;
+  outline: none;
+}
+
+.icon-square {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  background: black;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icon-square:hover {
+  background: white;
+  color: black;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 80%;
+  height: 80%;
+  background: black;
+  border: 2px solid white;
+  padding: 20px;
+  overflow: auto;
+}
+
+.codigo-container {
+  display: flex;
+  gap: 10px;
+}
+
+.codigo-input {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid white;
+  background: black;
+  color: white;
+  outline: none;
+}
+
+.codigo-input:focus {
+  border-color: cyan;
+}
+
+.codigo-result {
+  margin-top: 20px;
+  color: white;
 }

@@ -1,2 +1,26 @@
 <div class="pantalla">
+  <div class="menu-container">
+    <div class="menu-item" *ngFor="let item of items; let i = index">
+      <input type="text" class="menu-square">
+      <button class="icon-square" (click)="abrirModal(i)">
+        🔍
+      </button>
+    </div>
+  </div>
+
+<!-- Modal animado -->
+  <div class="modal-overlay" *ngIf="modalAbierto !== null" (click)="cerrarModal()">
+    <div 
+      class="modal-content" 
+      [@zoomModal]
+      (click)="$event.stopPropagation()"
+    >
+      <ng-container [ngSwitch]="modalAbierto">
+        <div *ngSwitchCase="1"></div>
+        <div *ngSwitchCase="2"></div>
+        <div *ngSwitchCase="3"></div>
+        <div *ngSwitchCase="4"></div>
+      </ng-container>
+    </div>
+  </div>
 </div>
