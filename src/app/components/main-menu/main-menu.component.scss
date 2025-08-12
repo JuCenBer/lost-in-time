@@ -95,3 +95,10 @@
   margin-top: 20px;
   color: white;
 }
+
+.icon {
+  width: 115%;
+}
+.icon:hover {
+  content: url("../../../assets/icons/magnifier-black.png");
+}

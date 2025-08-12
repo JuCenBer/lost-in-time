@@ -3,7 +3,7 @@
     <div class="menu-item" *ngFor="let item of items; let i = index">
       <input type="text" class="menu-square" maxlength="1" [(ngModel)]="input[i]" (ngModelChange)="input[i] = input[i].toUpperCase()">
       <button class="icon-square" (click)="abrirModal(i)">
-        🔍
+        <img class="icon" src="assets/icons/magnifier-white.png">
       </button>
     </div>
   </div>
