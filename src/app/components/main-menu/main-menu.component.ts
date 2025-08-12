@@ -1,8 +1,8 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CountdownComponent } from "../countdown/countdown.component";
 
 @Component({
   selector: 'app-main-menu',
@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     ])
   ]
 })
-export class MainMenuComponent {
+export class MainMenuComponent {  
   items = [1, 2, 3, 4];
 
   input: String[] = ['','','',''];
