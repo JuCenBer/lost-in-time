@@ -1,0 +1,10 @@
+<div class="pantalla">
+
+    <app-countdown *ngIf="this.diferencia() >= 0" [fechaObjetivo]="this.fechaObjetivo"></app-countdown>
+    <div *ngIf="this.diferencia() < 0" class="message">
+        <p>¡Felicidades por llegar hasta aquí!</p>
+        <p>Has resuelto todos los enigmas y has demostrado ser un verdadero maestro del escape room.</p>
+        <p>Si has disfrutado de esta experiencia, no dudes en compartirla con tus amigos y familiares.</p>
+        <p>¡Gracias por jugar!</p>
+    </div>
+</div>

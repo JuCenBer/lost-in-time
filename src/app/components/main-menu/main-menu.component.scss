@@ -6,6 +6,7 @@
   height: 98%;
   background: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -101,4 +102,54 @@
 }
 .icon:hover {
   content: url("../../../assets/icons/magnifier-black.png");
+}
+
+.next-button{
+  cursor: pointer; 
+  margin: auto;
+  max-width: 6vw; 
+  max-height: 12vh;
+}
+
+.next-button:hover {
+  animation: invertColors 0.28s ease-in-out forwards;
+}
+
+@keyframes invertColors {
+      0% {
+        filter: invert(0%);
+      }
+      100% {
+        filter: invert(95%);
+      }
+}
+
+.error-code{
+  font-family: 'Press Start 2P', monospace;
+  color: rgb(255, 0, 0);
+  animation: fadeInOut 5s;
+  position: absolute;
+  top: 85%;
+  font-size: x-large;
+}
+
+@keyframes fadeInOut  {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.success-code{
+  font-family: 'Press Start 2P', monospace;
+  color: rgb(0, 255, 0);
+  animation: fadeIn 3s;
+  position: absolute;
+  top: 85%;
+  font-size: x-large;
+}
+
+@keyframes fadeIn  {
+  0%   { opacity: 0; }
+  100%  { opacity: 1; }
 }

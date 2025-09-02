@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
@@ -14,7 +14,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   segundos: number = 0
 
   private intervalo: any;
-  private fechaObjetivo = new Date('2025-09-21T00:00:00'); // Fecha destino
+  @Input() fechaObjetivo!: Date; // Fecha destino
 
   ngOnInit() {
     this.actualizarTiempo();

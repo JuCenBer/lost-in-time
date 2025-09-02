@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.pantalla {
+  position: absolute;
+  width: 99%;
+  height: 98%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.message{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+}
