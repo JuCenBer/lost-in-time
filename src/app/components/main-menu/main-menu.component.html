@@ -16,14 +16,13 @@
   <div class="modal-overlay" *ngIf="modalAbierto !== null" (click)="cerrarModal()">
     <div 
       class="modal-content" 
-      [@zoomModal]
       (click)="$event.stopPropagation()"
     >
       <ng-container [ngSwitch]="modalAbierto">
-        <app-puzzle1 class="modal zoom-in" *ngSwitchCase="1"></app-puzzle1>
-        <app-puzzle2 class="modal zoom-in" *ngSwitchCase="2"></app-puzzle2>
-        <app-puzzle3 class="modal zoom-in" *ngSwitchCase="3"></app-puzzle3>
-        <app-puzzle4 class="modal zoom-in" *ngSwitchCase="4"></app-puzzle4>
+        <app-puzzle1 class="modal" *ngSwitchCase="0"></app-puzzle1>
+        <app-puzzle2 class="modal" *ngSwitchCase="1"></app-puzzle2>
+        <app-puzzle3 class="modal" *ngSwitchCase="2"></app-puzzle3>
+        <app-puzzle4 class="modal" *ngSwitchCase="3"></app-puzzle4>
       </ng-container>
     </div>
   </div>
