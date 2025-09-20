@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class LastHintComponent {
   @ViewChild(CountdownComponent) countdownComponent!: CountdownComponent;
 
-  fechaObjetivo = new Date('2025-09-21T00:00:00'); 
+  fechaObjetivo = new Date('2025-09-21T16:00:00'); 
 
   public diferencia(){
     const ahora = new Date();
